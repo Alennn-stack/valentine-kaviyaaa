@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Love Letter 💌</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(to bottom, #ffefba, #ffffff);
+        overflow: hidden;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    h1 {
+        font-family: 'Pacifico', cursive;
+        font-size: 3em;
+        color: #ff4081;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.3em;
+        color: #555;
+        margin: 10px 0;
+    }
+
+    .btn {
+        display: inline-block;
+        text-decoration: none;
+        background-color: #ff4081;
+        color: white;
+        padding: 15px 30px;
+        font-size: 1.2em;
+        border-radius: 30px;
+        margin-top: 30px;
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 10;
+    }
+
+    .btn:hover {
+        background-color: #ff79a8;
+        transform: scale(1.05);
+    }
+
+    /* Heart Animation */
+    .heart {
+        position: absolute;
+        font-size: 2em;
+        color: #ff4081;
+        animation: float 7s linear infinite;
+        opacity: 0.8;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0) scale(0.5);
+            opacity: 0.5;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-1200px) scale(1);
+            opacity: 0;
+        }
+    }
+</style>
+</head>
+<body>
+<h1>My Love Letter to You 💌</h1>
+<p>Kaviya,</p>
+<p>You are my favorite person. You're so amazing that I know you're the best. 💖</p>
+<p>You're adorableeeee, and everyone should know that 😌</p>
+<p>PS: Yes, I made a whole website. Yes, I’m that extra 😎</p>
+
+<a class="btn" href="funny.html">Next 😂</a>
+
+<!-- Hearts Falling from Heaven -->
+<script>
+    const colors = ['#ff4081', '#ff79a8', '#ff6f91', '#ff9aa2', '#ffb3c1'];
+    for(let i=0; i<30; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = 5 + Math.random() * 5 + 's';
+        heart.style.fontSize = 20 + Math.random() * 30 + 'px';
+        heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+        heart.innerHTML = '💌';
+        document.body.appendChild(heart);
+    }
+</script>
+</body>
+</html>
