@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funny Reasons 😂❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        padding: 50px 20px;
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(to top, #fff1f8, #ffe4e1);
+        overflow: hidden;
+        text-align: center;
+    }
+
+    h1 {
+        font-family: 'Pacifico', cursive;
+        font-size: 2.8em;
+        color: #ff4081;
+        margin-bottom: 30px;
+    }
+
+    ul {
+        font-size: 1.3em;
+        color: #555;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+
+    ul li {
+        margin: 15px 0;
+        position: relative;
+        z-index: 5;
+    }
+
+    .btn {
+        display: inline-block;
+        text-decoration: none;
+        background-color: #ff4081;
+        color: white;
+        padding: 15px 30px;
+        font-size: 1.2em;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 10;
+    }
+
+    .btn:hover {
+        background-color: #ff79a8;
+        transform: scale(1.05);
+    }
+
+    /* Angels Animation */
+    .angel {
+        position: absolute;
+        font-size: 2em;
+        opacity: 0.8;
+        animation: fly 8s linear infinite;
+    }
+
+    @keyframes fly {
+        0% {
+            transform: translateX(-100px) translateY(0) rotate(0deg);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(120vw) translateY(-800px) rotate(360deg);
+            opacity: 0;
+        }
+    }
+</style>
+</head>
+<body>
+<h1>Funny Reasons I Love You 😂❤️</h1>
+<ul>
+<li>Because you make fun of my weird makeout sounds 😭😂</li>
+<li>Because you’re adorable even when you’re annoyed 😤❤️</li>
+<li>Because you laugh at me but still love me 😎</li>
+</ul>
+
+<a class="btn" href="memories.html">Memories 📸</a>
+
+<!-- Angels flying from sides -->
+<script>
+    const angels = ['😇', '👼', '😇', '👼', '😇'];
+    for(let i=0; i<30; i++){
+        const angel = document.createElement('div');
+        angel.className = 'angel';
+        angel.style.left = Math.random() * 100 + 'vw';
+        angel.style.top = Math.random() * 100 + 'vh';
+        angel.style.fontSize = 20 + Math.random() * 30 + 'px';
+        angel.style.animationDuration = 5 + Math.random() * 5 + 's';
+        angel.innerHTML = angels[Math.floor(Math.random() * angels.length)];
+        document.body.appendChild(angel);
+    }
+</script>
+</body>
+</html>
