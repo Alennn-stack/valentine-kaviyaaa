@@ -3,48 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Memories 📸</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<title>Our Magical Memory 🥚📸</title>
 <style>
-    body {
-        margin: 0;
-        padding: 50px 20px;
-        font-family: 'Roboto', sans-serif;
-        background: url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1650&q=80') no-repeat center center fixed;
-        background-size: cover;
-        color: #fff;
-        text-align: center;
-        overflow-x: hidden;
-    }
+  body {
+    margin: 0;
+    padding: 50px 20px;
+    font-family: 'Great Vibes', cursive;
+    background: linear-gradient(to top, #ffe6f0, #fff0f5);
+    text-align: center;
+    color: #4a0033;
+  }
 
-    /* Overlay for magical glow */
-    body::before {
-        content: '';
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background: rgba(0, 0, 50, 0.4);
-        z-index: 0;
-    }
+  h1 {
+    font-size: 3em;
+    color: #d60073;
+    margin-bottom: 50px;
+    text-shadow: 0 0 20px #ffb6c1;
+  }
 
-    h1 {
-        font-family: 'Great Vibes', cursive;
-        font-size: 3em;
-        color: #ffd1dc;
-        margin-bottom: 20px;
-        z-index: 1;
-        position: relative;
-        text-shadow: 0 0 20px #ffb6c1, 0 0 30px #ff69b4;
-    }
+  .egg-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
 
-    p {
-        font-size: 1.3em;
-        color: #f0e6ff;
-        margin-bottom: 30px;
-        z-index: 1;
-        position: relative;
-    }
+  .egg {
+    width: 200px;
+    height: 250px;
+    background: radial-gradient(circle at top, #fff, #ffe6f0);
+    border-radius: 50% 50% 45% 45%;
+    border: 5px solid #ff99cc;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.6);
+  }
 
-    .photo {
-        width: 250p
+  .egg::before, .egg::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    transform: rotate(45deg);
+  }
+
+  .photo {
+    width: 100%;
+    height: auto;
+    display: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.6);
+  }
+
+  /* Crack animation */
+  .crack {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ff66b2;
+    transform: rotate(0deg) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s ease;
+  }
+
+  .egg.clicked .crack {
+    transform: rotate(20deg) scaleX(1);
+  }
+
+  .egg.clicked {
+    transform: scale(0.9) rotate(-10deg);
+  }
+</style>
+</head>
+<body>
+<h1>Click the Egg to Reveal our Memory 🥚💖</h1>
+
+<div class="egg-container" onclick="breakEgg(this)">
+  <div class="egg">
+    <div class="crack"></div>
+  </div>
+</div>
+
+<img src="C:/Users/ALEN JOSE/Desktop/kaviya.jpeg" class="photo" id="photo1">
+<img src="C:/Users/ALEN JOSE/Desktop/kaviya123.jpeg" class="photo" id="photo2">
+
+<script>
+function breakEgg(container) {
+  const egg = container.querySelector('.egg');
+  egg.classList.add('clicked');
+
+  // Show photos after a short delay
+  setTimeout(() => {
+    document.getElementById('photo1').style.display = 'inline-block';
+    document.getElementById('photo2').style.display = 'inline-block';
+  }, 600);
+}
+</script>
+</body>
+</html>
+
