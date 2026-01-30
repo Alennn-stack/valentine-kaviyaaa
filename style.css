@@ -1,0 +1,61 @@
+body {
+  font-family: 'Playfair Display', serif; /* Elegant, queenly font */
+  background: linear-gradient(to right, #ffe6f0, #fff0f5); /* Soft romantic pink gradient */
+  text-align: center;
+  padding: 50px;
+  color: #4a0033; /* deep romantic purple for text */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional: Add Google font link in your HTML head */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+h1 {
+  color: #d60073;
+  font-size: 3em;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 0 0 15px #ff99cc, 0 0 30px #ff66b2; /* soft glowing effect */
+  margin-bottom: 30px;
+}
+
+.photo {
+  width: 220px;
+  border-radius: 20px;
+  margin: 15px;
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.photo:hover {
+  transform: scale(1.1) rotate(-1deg);
+  box-shadow: 0 20px 40px rgba(255, 105, 180, 0.8);
+}
+
+.btn {
+  display: inline-block;
+  margin: 25px;
+  padding: 15px 35px;
+  background: #ff4da6;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0 0 5px #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 77, 166, 0.6);
+}
+
+.btn:hover {
+  background: #e60073;
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 77, 166, 0.8);
+}
+
+/* Floating hearts animation */
+.heart {
+  position: absolute;
+  font-size: 20px;
+  color: #ff66b2;
+  anim
